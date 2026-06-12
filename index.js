@@ -68,7 +68,11 @@ function onTaskTitleClicked(task) {
 
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
-    task.isDone = currentValue;
+    if(currentValue==true)
+    task.isDone = false;
+    else
+    task.isDone = true;
+    
 
     return task;
 }
